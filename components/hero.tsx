@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, MoveRight, Sparkles } from "lucide-react";
 
@@ -56,38 +57,19 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="relative"
         >
-          <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-[0_20px_80px_rgba(15,23,42,0.08)]">
-            <div className="mb-6 flex items-center justify-between">
-              <div>
-                <p className="text-xs uppercase tracking-[0.22em] text-slate-400">Operations</p>
-                <h2 className="mt-2 text-xl font-semibold text-slate-900">Growth engine overview</h2>
-              </div>
-              <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700">
-                Active
-              </span>
+          <div className="rounded-[2rem] border border-slate-200 bg-white p-3 shadow-[0_20px_80px_rgba(15,23,42,0.08)]">
+            <div className="overflow-hidden rounded-[1.5rem] bg-slate-200">
+              <Image
+                src="/profile-photo.png"
+                alt="MD ABDUL HAKIM SEYAM portrait"
+                width={940}
+                height={1180}
+                className="h-[620px] w-full object-cover"
+                priority
+              />
             </div>
 
-            <div className="space-y-4">
-              {[
-                "Lead generation",
-                "CRM lifecycle",
-                "Client communication",
-                "Marketplace coordination",
-                "Retention planning",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="flex items-center justify-between rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3"
-                >
-                  <span className="text-sm font-medium text-slate-700">{item}</span>
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-sky-100 text-sky-700">
-                    ✓
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-6 grid gap-3 border-t border-slate-200 pt-5 sm:grid-cols-3">
+            <div className="mt-5 grid gap-3 sm:grid-cols-3">
               {[
                 ["Pipeline", "Structured"],
                 ["Reports", "Clear"],

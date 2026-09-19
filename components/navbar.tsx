@@ -20,7 +20,9 @@ export function Navbar() {
     }
 
     const savedTheme = window.localStorage.getItem("theme");
-    return savedTheme ? savedTheme === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const normalizedTheme = savedTheme === "dark" || savedTheme === "light" ? savedTheme : null;
+
+    return normalizedTheme ? normalizedTheme === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
   });
 
   useEffect(() => {
@@ -55,10 +57,10 @@ export function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
         <a href="#top" className="flex min-w-0 items-center gap-3" aria-label="Go to top">
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-900 text-xs font-semibold text-white dark:bg-slate-100 dark:text-slate-900">
-            AM
+            SH
           </span>
           <span className="truncate text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-600 dark:text-slate-300 sm:text-sm">
-            Alex Morgan
+            MD ABDUL HAKIM SEYAM
           </span>
         </a>
 

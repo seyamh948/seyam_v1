@@ -1,5 +1,5 @@
 export const profile = {
-  name: "Alex Morgan",
+  name: "MD ABDUL HAKIM SEYAM",
   role: "Digital Growth & Client Acquisition Team Lead",
   tagline:
     "Leading digital marketing, client acquisition, sales operations, online platforms, and client relationships for modern startups.",
